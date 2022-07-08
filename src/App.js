@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-import Header from './containers/Header';
-
+import RoomAllocation from './containers/RoomAllocation';
 class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header />
-        <h1 className='text-3xl font-bold underline'> Hello, World! </h1>
+        <RoomAllocation />
       </div>
     );
   }
