@@ -13,6 +13,9 @@ import {
 import { NumberValidator } from '../../utils/validator';
 import Box from '../Box';
 
+const preventDefault = e => {
+  e.preventDefault();
+};
 
 const CustomInputNumber = ({
   min = 0,
@@ -84,12 +87,20 @@ const CustomInputNumber = ({
 
     if (KEY_CODES[keyCode] === ESC) {
       blurNumberBoxRef();
-      onBlur(event);
     }
 
     if (KEY_CODES[keyCode] === BACKSPACE) {
       handleChange(+`${value}`.slice(0, -1));
     }
+  };
+
+  const handleBlur = () => {
+    onBlur({
+      target: {
+        name,
+        value,
+      },
+    });
   };
 
   return (
@@ -106,7 +117,11 @@ const CustomInputNumber = ({
         </>
       ) : (
         <>
+          <input type='number' onBlur={onBlur}>
+            {/* {value} */}
+          </input>
           <Box
+            onMouseDown={preventDefault} // to avoid focus this element
             onClick={handleMinus}
             className='cursor-pointer select-none border-sky-600  text-4xl  text-sky-600'
           >
@@ -114,7 +129,7 @@ const CustomInputNumber = ({
           </Box>
           <Box
             ref={numberBoxRef}
-            onBlur={onBlur}
+            onBlur={handleBlur}
             onKeyDown={handleKeyDown}
             className='relative border-sky-600 outline-none focus:border-2	'
             tabIndex={0}
@@ -122,6 +137,7 @@ const CustomInputNumber = ({
             {value}
           </Box>
           <Box
+            onMouseDown={preventDefault}
             onClick={handlePlus}
             className='cursor-pointer select-none border-sky-600 text-5xl text-sky-600	'
           >
