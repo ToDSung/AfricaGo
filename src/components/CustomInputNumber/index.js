@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -7,20 +7,20 @@ import {
   DOWN_ARROW,
   ESC,
   KEY_CODES,
-  LEFT_ARROW,
   NUMBER_KEY_CODES,
-  RIGHT_ARROW,
   UP_ARROW,
 } from '../../constants/keycode';
+import { NumberValidator } from '../../utils/validator';
 import Box from '../Box';
 
+
 const CustomInputNumber = ({
-  // min = 0,
-  // max = Number.MAX_SAFE_INTEGER,
+  min = 0,
+  max = Number.MAX_SAFE_INTEGER,
   step = 1,
   name,
   value = 0,
-  // disabled = false,
+  disabled = false,
   onChange = () => {},
   onBlur = () => {},
 }) => {
@@ -29,28 +29,36 @@ const CustomInputNumber = ({
   const focusNumberBoxRef = () => {
     numberBoxRef.current.focus();
   };
+
   const blurNumberBoxRef = () => {
     numberBoxRef.current.blur();
   };
 
+  const checkNewValueValid = useCallback(
+    newValue => {
+      return NumberValidator({ min, max })(newValue);
+    },
+    [min, max]
+  );
+
+  const handleChange = newValue => {
+    checkNewValueValid(newValue) &&
+      onChange({
+        target: {
+          name,
+          value: newValue,
+        },
+      });
+  };
+
   const handleMinus = () => {
     focusNumberBoxRef();
-    onChange({
-      target: {
-        name,
-        value: +value - step,
-      },
-    });
+    handleChange(+value - step);
   };
 
   const handlePlus = () => {
     focusNumberBoxRef();
-    onChange({
-      target: {
-        name,
-        value: +value + step,
-      },
-    });
+    handleChange(+value + step);
   };
 
   const handleKeyDown = event => {
@@ -62,68 +70,66 @@ const CustomInputNumber = ({
       return;
     }
 
-    if ([DOWN_ARROW, LEFT_ARROW].includes(KEY_CODES[keyCode])) {
+    if ([DOWN_ARROW].includes(KEY_CODES[keyCode])) {
       return handleMinus();
     }
 
-    if ([UP_ARROW, RIGHT_ARROW].includes(KEY_CODES[keyCode])) {
+    if ([UP_ARROW].includes(KEY_CODES[keyCode])) {
       return handlePlus();
     }
 
     if (keyCode in NUMBER_KEY_CODES) {
-      onChange({
-        target: {
-          name,
-          value: +(`${value}` + `${KEY_CODES[keyCode]}`),
-        },
-      });
+      handleChange(+(`${value}` + `${KEY_CODES[keyCode]}`));
     }
 
     if (KEY_CODES[keyCode] === ESC) {
       blurNumberBoxRef();
-      handleBlur(event);
+      onBlur(event);
     }
 
     if (KEY_CODES[keyCode] === BACKSPACE) {
-      onChange({
-        target: {
-          name,
-          value: +`${value}`.slice(0, -1),
-        },
-      });
+      handleChange(+`${value}`.slice(0, -1));
     }
   };
 
-  const handleBlur = event => {
-    onBlur(event);
-  };
-
   return (
-    <>
-      <div className='flex gap-2 p-2'>
-        <Box
-          onClick={handleMinus}
-          className='cursor-pointer select-none border-sky-600 text-4xl text-sky-600	'
-        >
-          -
-        </Box>
-        <Box
-          ref={numberBoxRef}
-          onBlur={handleBlur}
-          onKeyDown={handleKeyDown}
-          className='relative border-sky-600 outline-none focus:border-2	'
-          tabIndex={0}
-        >
-          {value}
-        </Box>
-        <Box
-          onClick={handlePlus}
-          className='cursor-pointer select-none border-sky-600 text-5xl text-sky-600	'
-        >
-          +
-        </Box>
-      </div>
-    </>
+    <div className='flex gap-2 p-2'>
+      {disabled ? (
+        <>
+          <Box className='select-none border-gray-600 text-4xl text-gray-600'>
+            -
+          </Box>
+          <Box className='relative border-gray-600 outline-none'>{value}</Box>
+          <Box className='select-none border-gray-600 text-4xl text-gray-600'>
+            +
+          </Box>
+        </>
+      ) : (
+        <>
+          <Box
+            onClick={handleMinus}
+            className='cursor-pointer select-none border-sky-600  text-4xl  text-sky-600'
+          >
+            -
+          </Box>
+          <Box
+            ref={numberBoxRef}
+            onBlur={onBlur}
+            onKeyDown={handleKeyDown}
+            className='relative border-sky-600 outline-none focus:border-2	'
+            tabIndex={0}
+          >
+            {value}
+          </Box>
+          <Box
+            onClick={handlePlus}
+            className='cursor-pointer select-none border-sky-600 text-5xl text-sky-600	'
+          >
+            +
+          </Box>
+        </>
+      )}
+    </div>
   );
 };
 
