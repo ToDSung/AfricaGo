@@ -117,9 +117,6 @@ const CustomInputNumber = ({
         </>
       ) : (
         <>
-          <input type='number' onBlur={onBlur}>
-            {/* {value} */}
-          </input>
           <Box
             onMouseDown={preventDefault} // to avoid focus this element
             onClick={handleMinus}
