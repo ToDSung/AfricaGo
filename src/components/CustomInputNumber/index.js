@@ -112,6 +112,7 @@ const CustomInputNumber = ({
     <div className='flex gap-2 p-2'>
       <>
         <Box
+          role='minus'
           {...(!shouldDisableMinus && {
             onMouseDown: preventDefault, // to avoid focus this element
             onClick: handleMinus,
@@ -143,6 +144,7 @@ const CustomInputNumber = ({
           {value}
         </Box>
         <Box
+          role='plus'
           {...(!shouldDisablePlus && {
             onMouseDown: preventDefault,
             onClick: handlePlus,

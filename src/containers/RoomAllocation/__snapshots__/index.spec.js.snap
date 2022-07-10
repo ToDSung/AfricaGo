@@ -1,0 +1,595 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should RoomAllocation render 1`] = `
+<div
+  className="w-96 p-2"
+>
+  <h5>
+    住家人數： 
+    10
+    人 / 
+    3
+    房
+  </h5>
+  <div
+    className="flex items-center justify-center rounded border text-base my-2 mr-4 h-10 text-gray-600 border-amber-500 "
+  >
+    尚未分配人數: 
+    7
+    人
+  </div>
+  <div>
+    房間：
+    1
+    人
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          大人
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          年齡 20+
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+          onBlur={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          1
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          小孩
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+          onBlur={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          0
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    房間：
+    1
+    人
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          大人
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          年齡 20+
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+          onBlur={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          1
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          小孩
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+          onBlur={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          0
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    房間：
+    1
+    人
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          大人
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          年齡 20+
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+          onBlur={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          1
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          小孩
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+          onBlur={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          0
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should RoomAllocation render 2`] = `
+<div
+  className="w-96 p-2"
+>
+  <h5>
+    住家人數： 
+    3
+    人 / 
+    3
+    房
+  </h5>
+  <div
+    className="flex items-center justify-center rounded border text-base my-2 mr-4 h-10 text-gray-600 border-gray-600 "
+  >
+    尚未分配人數: 
+    7
+    人
+  </div>
+  <div>
+    房間：
+    1
+    人
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          大人
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          年齡 20+
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+        >
+          1
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          小孩
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+        >
+          0
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    房間：
+    1
+    人
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          大人
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          年齡 20+
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+        >
+          1
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          小孩
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+        >
+          0
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    房間：
+    1
+    人
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          大人
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          年齡 20+
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+        >
+          1
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2"
+    >
+      <div
+        className="my-2 flex flex-col"
+      >
+        <span>
+          小孩
+           
+        </span>
+        <span
+          className="text-gray-400"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="flex gap-2 p-2"
+      >
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+          role="minus"
+        >
+          -
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+        >
+          0
+        </div>
+        <div
+          className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+          role="plus"
+        >
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

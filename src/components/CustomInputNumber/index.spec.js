@@ -208,6 +208,7 @@ test('should CustomInputNumber onBlur', () => {
       name='test'
       value={2}
       disabled={false}
+      onChange={() => {}}
       onBlur={mockOnblur}
     />
   );

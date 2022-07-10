@@ -8,6 +8,7 @@ exports[`should CustomInputNumber render active 1`] = `
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl cursor-pointer  border-sky-600 text-sky-600"
     onClick={[Function]}
     onMouseDown={[Function]}
+    role="minus"
   >
     -
   </div>
@@ -26,6 +27,7 @@ exports[`should CustomInputNumber render active 1`] = `
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
     onClick={[Function]}
     onMouseDown={[Function]}
+    role="plus"
   >
     +
   </div>
@@ -40,6 +42,7 @@ exports[`should CustomInputNumber render active 2`] = `
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl cursor-pointer  border-sky-600 text-sky-600"
     onClick={[Function]}
     onMouseDown={[Function]}
+    role="minus"
   >
     -
   </div>
@@ -58,6 +61,7 @@ exports[`should CustomInputNumber render active 2`] = `
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
     onClick={[Function]}
     onMouseDown={[Function]}
+    role="plus"
   >
     +
   </div>
@@ -70,6 +74,7 @@ exports[`should CustomInputNumber render disabled 1`] = `
 >
   <div
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+    role="minus"
   >
     -
   </div>
@@ -83,6 +88,7 @@ exports[`should CustomInputNumber render disabled 1`] = `
   </div>
   <div
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+    role="plus"
   >
     +
   </div>
@@ -95,6 +101,7 @@ exports[`should CustomInputNumber render disabled 2`] = `
 >
   <div
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+    role="minus"
   >
     -
   </div>
@@ -108,6 +115,7 @@ exports[`should CustomInputNumber render disabled 2`] = `
   </div>
   <div
     className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+    role="plus"
   >
     +
   </div>
