@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Box = forwardRef(function Box({ className, children, ...props }, ref) {
   return (
     <div
-      className={`flex h-12 w-12 items-center justify-center rounded border text-base ${className}`}
+      className={`flex items-center justify-center rounded border text-base ${className}`}
       {...props}
       ref={ref}
     >

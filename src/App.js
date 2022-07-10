@@ -5,7 +5,11 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <RoomAllocation />
+        <RoomAllocation
+          guest={10}
+          room={3}
+          onChange={result => console.log(result)}
+        />
       </div>
     );
   }
