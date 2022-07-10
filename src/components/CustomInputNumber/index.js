@@ -24,6 +24,8 @@ const CustomInputNumber = ({
   name,
   value = 0,
   disabled = false,
+  disabledMinus = false,
+  disabledPlus = false,
   onChange = () => {},
   onBlur = () => {},
 }) => {
@@ -103,47 +105,57 @@ const CustomInputNumber = ({
     });
   };
 
+  const shouldDisableMinus = disabled || disabledMinus || value === min;
+  const shouldDisablePlus = disabled || disabledPlus || value === max;
+
   return (
     <div className='flex gap-2 p-2'>
-      {disabled ? (
-        <>
-          <Box className='h-12 w-12 select-none border-gray-600 text-4xl text-gray-600 '>
-            -
-          </Box>
-          <Box className='relative h-12 w-12 border-gray-600 outline-none '>
-            {value}
-          </Box>
-          <Box className='h-12 w-12 select-none border-gray-600 text-4xl text-gray-600 '>
-            +
-          </Box>
-        </>
-      ) : (
-        <>
-          <Box
-            onMouseDown={preventDefault} // to avoid focus this element
-            onClick={handleMinus}
-            className='h-12 w-12 cursor-pointer select-none  border-sky-600  text-4xl  text-sky-600'
-          >
-            -
-          </Box>
-          <Box
-            ref={numberBoxRef}
-            onBlur={handleBlur}
-            onKeyDown={handleKeyDown}
-            className='relative h-12 w-12 border-sky-600  outline-none focus:border-2	'
-            tabIndex={0}
-          >
-            {value}
-          </Box>
-          <Box
-            onMouseDown={preventDefault}
-            onClick={handlePlus}
-            className='h-12 w-12 cursor-pointer select-none  border-sky-600 text-5xl text-sky-600	'
-          >
-            +
-          </Box>
-        </>
-      )}
+      <>
+        <Box
+          {...(!shouldDisableMinus && {
+            onMouseDown: preventDefault, // to avoid focus this element
+            onClick: handleMinus,
+          })}
+          className={`h-12 w-12  select-none text-4xl ${
+            shouldDisableMinus
+              ? 'border-gray-600 text-gray-600'
+              : 'cursor-pointer  border-sky-600 text-sky-600'
+          }`}
+        >
+          -
+        </Box>
+        <Box
+          {...(!disabled && {
+            ref: numberBoxRef,
+            onBlur: handleBlur,
+            onKeyDown: handleKeyDown,
+            tabIndex: 0,
+          })}
+          className={`
+              relative h-12 w-12 outline-none 
+              ${
+                disabled
+                  ? 'border-gray-600 text-gray-600'
+                  : 'border-sky-600 focus:border-2'
+              }
+            `}
+        >
+          {value}
+        </Box>
+        <Box
+          {...(!shouldDisablePlus && {
+            onMouseDown: preventDefault,
+            onClick: handlePlus,
+          })}
+          className={`h-12 w-12  select-none  text-4xl  ${
+            shouldDisablePlus
+              ? 'border-gray-600 text-gray-600'
+              : ' cursor-pointer border-sky-600  text-sky-600'
+          }`}
+        >
+          +
+        </Box>
+      </>
     </div>
   );
 };
@@ -155,6 +167,8 @@ CustomInputNumber.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.number,
   disabled: PropTypes.bool,
+  disabledMinus: PropTypes.bool,
+  disabledPlus: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func,
 };

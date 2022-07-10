@@ -25,7 +25,7 @@ const checkRoomAllowGuests = NumberValidator({
 
 const RoomAllocation = ({ guest, room, onChange = () => {} }) => {
   const [result, setResult] = useState(
-    [...new Array(room)].map(() => ({
+    [...Array(room)].map(() => ({
       adult: MIN_ROOM_ADULTS,
       child: MIN_ROOM_CHILDREN,
     }))
@@ -35,7 +35,7 @@ const RoomAllocation = ({ guest, room, onChange = () => {} }) => {
     calcTotalAllowGuests(result, guest)
   );
 
-  const isDisabled = guest === room;
+  const shouldDisabled = guest === room;
 
   const checkTotalAllowGuests = useCallback(
     newValue => {
@@ -75,8 +75,8 @@ const RoomAllocation = ({ guest, room, onChange = () => {} }) => {
         住家人數： {guest}人 / {room}房
       </h5>
       <Box
-        className={`my-2 h-10 text-gray-600  ${
-          isDisabled ? 'border-gray-600' : 'border-amber-500'
+        className={`my-2 mr-4 h-10 text-gray-600 ${
+          shouldDisabled ? 'border-gray-600' : 'border-amber-500'
         } `}
       >
         尚未分配人數: {allowGuests}人
@@ -92,7 +92,10 @@ const RoomAllocation = ({ guest, room, onChange = () => {} }) => {
               step={STEP}
               name='adult'
               value={adult}
-              disabled={isDisabled}
+              disabled={shouldDisabled}
+              disabledPlus={
+                allowGuests === 0 || !checkRoomAllowGuests(adult + child + 1)
+              }
               onChange={handleChange(index)}
             />
           </div>
@@ -104,7 +107,10 @@ const RoomAllocation = ({ guest, room, onChange = () => {} }) => {
               step={STEP}
               name='child'
               value={child}
-              disabled={isDisabled}
+              disabled={shouldDisabled}
+              disabledPlus={
+                allowGuests === 0 || !checkRoomAllowGuests(adult + child + 1)
+              }
               onChange={handleChange(index)}
             />
           </div>
