@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should CustomInputNumber render active 1`] = `
+<div
+  className="flex gap-2 p-2"
+>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl cursor-pointer  border-sky-600 text-sky-600"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  >
+    -
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    2
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  >
+    +
+  </div>
+</div>
+`;
+
+exports[`should CustomInputNumber render active 2`] = `
+<div
+  className="flex gap-2 p-2"
+>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl cursor-pointer  border-sky-600 text-sky-600"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  >
+    -
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-sky-600 focus:border-2
+            "
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    3
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl   cursor-pointer border-sky-600  text-sky-600"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  >
+    +
+  </div>
+</div>
+`;
+
+exports[`should CustomInputNumber render disabled 1`] = `
+<div
+  className="flex gap-2 p-2"
+>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+  >
+    -
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+  >
+    2
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+  >
+    +
+  </div>
+</div>
+`;
+
+exports[`should CustomInputNumber render disabled 2`] = `
+<div
+  className="flex gap-2 p-2"
+>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none text-4xl border-gray-600 text-gray-600"
+  >
+    -
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base 
+              relative h-12 w-12 outline-none 
+              border-gray-600 text-gray-600
+            "
+  >
+    3
+  </div>
+  <div
+    className="flex items-center justify-center rounded border text-base h-12 w-12  select-none  text-4xl  border-gray-600 text-gray-600"
+  >
+    +
+  </div>
+</div>
+`;
